@@ -39,7 +39,7 @@ cd ~/${DIRECTORY}
 
 echo -e "Installing needed packages\n"
 
-sudo apt-get update && sudo apt-get -y install sudo git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev
+sudo apt-get update && sudo apt-get -y install git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev
 
 echo -e "Downloading required packages\n"
 
