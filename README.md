@@ -12,3 +12,5 @@ At present this script only functions on the Debian based operating systems, so 
 -Linux Mint
 
 I am hoping to add more operating systems. Next on the cards will be Arch and Fedora.
+
+Any questions, feel free to hit me up on Twister @kurobeats, [Twitter](https://twitter.com/Kurobeats) or even [reddit](http://www.reddit.com/u/SirusCloud)
