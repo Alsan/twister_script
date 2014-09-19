@@ -5,4 +5,10 @@ Twister Installer script for Linux hosts. [Twister](https://github.com/miguelfre
 
 Creates a hidden dir in ~/ for storage of files and executable.
 
-At present this script only functions on Debian based machines. Will endeavour to extend that.
+At present this script only functions on the Debian based operating systems, so for example:
+
+-Debian
+-Ubuntu
+-Linux Mint
+
+I am hoping to add more operating systems. Next on the cards will be Arch and Fedora.
