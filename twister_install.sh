@@ -58,7 +58,7 @@ git clone https://github.com/miguelfreitas/twister-html.git ~/.twister/html
 
 # Start
 
-./twisterd -rpcuser=$user -rpcpassword=$pwd -rpcallowip=127.0.0.1 &
+./twisterd &
 
 sensible-browser http://localhost:28332/
 
