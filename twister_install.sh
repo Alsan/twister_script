@@ -47,7 +47,7 @@ git clone https://github.com/miguelfreitas/twister-core.git
 
 cd ./twister-core
 ./autotool.sh
-./configure
+./configure --enable-logging --enable-debug --enable-dht --with-boost-libdir=/usr/lib/x86_64-linux-gnu/
 make
 
 # Configuration & web gui
