@@ -19,6 +19,7 @@
 # Install
 
 DIRECTORY=".twister"
+ip_address="127.0.0.1"
 
 echo -e "Please setup the username and password.\n"
 echo -e "Username: "
@@ -27,7 +28,7 @@ read user
 
 echo -e "\nPassword: "
 
-read pwd
+read passwd
 
 
 if [ ! -d ~/${DIRECTORY} ]; then
@@ -39,7 +40,7 @@ cd ~/${DIRECTORY}
 
 echo -e "Installing needed packages\n"
 
-sudo apt-get update && sudo apt-get -y install git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev
+sudo apt update && sudo apt -y install git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev automake
 
 echo -e "Downloading required packages\n"
 
@@ -47,19 +48,20 @@ git clone https://github.com/miguelfreitas/twister-core.git
 
 cd ./twister-core
 ./autotool.sh
-./configure --enable-logging --enable-debug --enable-dht --with-boost-libdir=/usr/lib/x86_64-linux-gnu/
+./configure
 make
 
 # Configuration & web gui
 
-echo -e "rpcuser=${user}\nrpcpassword=${pwd}" > ~/.twister/twister.conf
+echo -e "rpcuser=${user}\nrpcpassword=${passwd}" > ~/.twister/twister.conf
 chmod 600 ~/.twister/twister.conf
 git clone https://github.com/miguelfreitas/twister-html.git ~/.twister/html
 
 # Start
 
-./twisterd &
+./twisterd -rpcuser=${user} -rpcpassword=${passwd} -rpcallowip=${ip_address} &
+disown
 
-sensible-browser http://localhost:28332/
+echo -e "Service started at http://localhost:28332/index.html"
 
 exit
