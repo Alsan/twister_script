@@ -40,7 +40,7 @@ cd ~/${DIRECTORY}
 
 echo -e "Installing needed packages\n"
 
-sudo apt update && sudo apt -y install git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev automake
+sudo apt update && sudo apt install -y git autoconf libtool build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev automake
 
 echo -e "Downloading required packages\n"
 
